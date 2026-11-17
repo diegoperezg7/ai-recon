@@ -89,30 +89,22 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex h-dvh">
-      {/* Left panel */}
-      <div className="hidden flex-col items-center justify-center bg-[#070b12] p-12 text-center lg:flex lg:w-1/3">
-        <div className="relative flex items-center justify-center">
-          <div className="absolute size-80 rounded-full border border-primary-foreground/10" />
-          <div className="absolute size-60 rounded-full border border-primary-foreground/15" />
-          <div className="absolute size-40 rounded-full border border-primary-foreground/20" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-white.png" alt="AIRecon" width={160} height={160} className="relative" />
-        </div>
-      </div>
-
-      {/* Right panel */}
-      <div className="flex w-full items-center justify-center bg-background p-8 lg:w-2/3">
-        <div className="w-full max-w-md space-y-10 py-24 lg:py-32">
-          <div className="space-y-4 text-center">
-            <h2 className="text-2xl font-medium tracking-tight">{t("login.title")}</h2>
-            <p className="mx-auto max-w-xl text-muted-foreground">{t("login.welcome")}</p>
+    <div className="flex min-h-dvh items-center justify-center bg-background p-6">
+      <div className="w-full max-w-sm space-y-8">
+        {/* Encabezado centrado: logo arriba + nombre */}
+        <div className="flex flex-col items-center gap-5 text-center">
+          <div className="relative flex size-32 items-center justify-center">
+            <div className="absolute inset-0 rounded-full border border-primary/10" />
+            <div className="absolute inset-4 rounded-full border border-primary/15" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="AIRecon" width={100} height={100} className="relative drop-shadow-[0_0_24px_rgba(37,99,235,0.35)]" />
           </div>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <div className="space-y-1.5">
-              <Label htmlFor="username">{t("login.username")}</Label>
-              <Input id="username" value="AIRecon" readOnly className="bg-muted text-muted-foreground" />
-            </div>
+          <div className="space-y-1.5">
+            <h1 className="text-3xl font-semibold tracking-tight">AIRecon</h1>
+            <p className="text-sm text-muted-foreground">{t("login.welcome")}</p>
+          </div>
+        </div>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-left">
             <div className="space-y-1.5">
               <Label htmlFor="password">{t("login.password")}</Label>
               <Input
@@ -152,7 +144,6 @@ export default function LoginPage() {
             </Button>
           </form>
         </div>
-      </div>
 
       <Dialog open={termsOpen} onOpenChange={setTermsOpen}>
         <DialogContent className="gap-0 p-0 sm:max-w-2xl">

@@ -1834,6 +1834,10 @@ var seedAngles = []string{
 	"Prioriza la inyección y el parsing de entrada: SQL/NoSQL, inyección de comandos, plantillas (SSTI), deserialización.",
 	"Prioriza las superficies pre-auth y la carga de ficheros: subida de archivos, rutas internas, SSRF, XXE.",
 	"Prioriza la lógica de negocio y las condiciones de carrera: flujos de pago/descuento, saltos de paso, mass assignment.",
+	"Prioriza la superficie de API: endpoints REST/GraphQL no documentados, verbos HTTP alternativos y debilidades de JWT (alg none, firma débil, claims manipulables).",
+	"Prioriza el lado cliente: XSS almacenado/reflejado/DOM, CORS/CSP mal configurados, clickjacking y open redirect.",
+	"Prioriza la exposición de información: errores verbosos, ficheros y rutas por defecto, metadatos y secretos/claves filtradas.",
+	"Prioriza el parsing y la caché: confusión de tipos (escalar vs array), request smuggling y envenenamiento de caché.",
 }
 
 func (s *Server) seedFirstIntent(t *Task) {

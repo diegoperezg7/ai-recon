@@ -157,7 +157,9 @@
   "nav": {
     "group": {
       "function": "Funciones",
-      "system": "Sistema"
+      "system": "Sistema",
+      "operation": "Operación",
+      "evidence": "Evidencia"
     },
     "item": {
       "agents": "Agentes",
@@ -180,7 +182,9 @@
       "tasks": "Tareas",
       "tools": "Herramientas",
       "traffic": "Tráfico",
-      "workspace": "Espacio de trabajo"
+      "workspace": "Espacio de trabajo",
+      "ai-engine": "Motor IA",
+      "interception": "Interceptación"
     }
   },
   "notFound": {

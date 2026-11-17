@@ -494,7 +494,7 @@ export default function DashboardPage() {
   // ── render ────────────────────────────────────────────────────────────────
 
   return (
-    <div className="flex flex-1 flex-col gap-4 pb-6">
+    <div className="flex flex-1 flex-col gap-5 pb-8">
       {/* ── Header ── */}
       <div>
         <div>
@@ -504,7 +504,7 @@ export default function DashboardPage() {
       </div>
 
       {/* ── Row 1: 5 stat cards ── */}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
         {/* 活跃任务 */}
         <Card className="gap-1">
           <CardHeader className="pb-0">
@@ -868,7 +868,7 @@ export default function DashboardPage() {
       </Card>
 
       {/* ── Row 3: 活动流 | 发现 ── */}
-      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {/* 活动流 */}
         <Card className="p-4">
           <div className="mb-3 flex items-center justify-between">
@@ -1072,7 +1072,7 @@ export default function DashboardPage() {
       </Card>
 
       {/* ── Row 5: 资产分布 | 流量状态码 | 拦截 & 待审批 ── */}
-      <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         {/* 资产分布 */}
         <Card className="p-4">
           <SectionTitle icon={NetworkIcon} sub={t("byType")}>
